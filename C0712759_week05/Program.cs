@@ -29,12 +29,18 @@ namespace FRI_FEB_8
         public void run()
         {
             FirstFloor = new Node();
+            SecondFloor = new Node();
+            ThirdFloor = new Node();
+            FourthFloor = new Node();
+
             FirstFloor.FloorNumber = "First Floor";
-            Console.WriteLine("floor number is {0} ", FirstFloor.FloorNumber);
             FirstFloor.elevatorUp = SecondFloor;
             SecondFloor.FloorNumber = "Second Floor";
-
-            Console.WriteLine("floor number is {0} ", SecondFloor.FloorNumber);
+            SecondFloor.elevatorUp = ThirdFloor;
+            ThirdFloor.FloorNumber = "Third Floor";
+            ThirdFloor.elevatorUp = FourthFloor;
+            FourthFloor.FloorNumber = "Fourth Floor";
+            FourthFloor.elevatorUp = null;
         }
     }
 }
