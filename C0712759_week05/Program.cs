@@ -41,6 +41,23 @@ namespace FRI_FEB_8
             ThirdFloor.elevatorUp = FourthFloor;
             FourthFloor.FloorNumber = "Fourth Floor";
             FourthFloor.elevatorUp = null;
+
+        }
+
+        public void TraverseList()
+        {
+            Node temp;
+            temp = Head;
+
+            // where am I going to start?
+            Console.WriteLine("The first floor is " + Head.FloorNumber);
+            while (temp != null)
+            {
+                // NOW GET TO THE SECOND FLOOR!!!!
+                temp = temp.elevatorUp;
+                Console.WriteLine(temp.FloorNumber);
+
+            }
         }
     }
 }
